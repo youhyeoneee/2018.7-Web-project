@@ -4,98 +4,90 @@
 		<meta charset="utf-8">
 		<title>회원가입</title>
 		<style type="text/css">
-		 .layer{
-
-		 	position: absolute;
-		 	padding: 50px;
-		 	top: 50%;
-		 	left: 50%;
-		 	background:#F5F5F5;
-		 	transform: translate(-50%, -50%);
-		 }
-		 
-		 table{
-		 	width: 100%;
-		 	height: 100px;
-		 	margin: auto;
-		 	
-		 }
-		 tr{
-		 	height="50";
-		 }
-		 .txt_center
-		 {
-		 	text-align: center;
-		 }
-		 .txt_right
-		 {
-		 	text-align: right;
-		 }
+			tr{
+ 			height="50"; 
+ 			}
 
 		</style>
+		<link rel="stylesheet" type="text/css" href="./css.css">
+		<script>
+			function IDcheck()
+			{
+				var id = "root";
+
+				if(id ==document.getElementById("userid").value)
+				{
+					alert("이미 존재하는 아이디입니다!")
+					
+				}
+			}
+			
+		</script>
 	</head>
 	<body>
-		<div class="layer">
-			<table border="0">
-				<thead></thead>
-				<tbody>
-				<tr>
-					<td class="txt_right">
-						<label for='username'>ID : </label>
-					</td>
-					<td>
-						<input type='text' id='username' name='userid'><button type="button">중복 체크</button>
-					</td>
-				</tr>
+		<form>
+			<div class="register_layer">
+				<table border="0" class="register_table">
+					<thead></thead>
+					<tbody>
+					<tr>
+						<td class="txt_right">
+							<label for='userid'>ID : </label>
+						</td>
+						<td>
+							<input type='text' id='userid' name='userid'><button type="button" onclick="IDcheck()">중복 체크</button>
+						</td>
+					</tr>
 
-					<td class="txt_right">
-						<label for='userpw'>PW : </label>
-					</td>
-					<td>
-						<input type='password' id='userpw' name='userpw'>
-					</td>				
-				<tr>
-					<td class="txt_right">
-						<label for='userpw'>PW체크: </label>
-					</td>
-					<td>
-						<input type='password' id='userpw' name='userpw'>
-					</td>	
-				</tr>
-				<tr>
-					<td class="txt_right">
-						<label for='useremail'>이메일 : </label>
-					</td>
-					<td>
-						<input type='email' id='useremail' name='useremail'>
-					</td>	
-				</tr>
-				<tr >
-					<td>
-						<label for='userphone'>핸드폰 : </label>
-					</td>
-					<td>
-						<select id="userphone">
-						    <option value="">::선택::</option>
-						    <option value="010">010</option>
-						    <option value="011">011</option>
-						    <option value="016">016</option>
-						    <option value="017">017</option>
-						    <option value="019">019</option>	    
-						</select>-
-						<input type='tel' id='userphone' name='userphone' size="4" maxlength="4">-
-						<input type='tel' id='userphone' name='userphone' size="4" maxlength="4">
-					</td>	
-				</tr>
-				</tbody>
-				<tfoot>
-				<tr height="50">
-					<td colspan="2" class="txt_center" >
-						<button type="button"  onclick="location.href='index.html'">취소</button> <button type="button">회원가입</button>
-					</td>	
-				</tr>
-				</tfoot>
-			</table>
-		</div>
+						<td class="txt_right">
+							<label for='userpw'>PW : </label>
+						</td>
+						<td>
+							<input type='password' id='userpw' name='userpw'>
+						</td>				
+					<tr>
+						<td class="txt_right">
+							<label for='userpw'>PW체크: </label>
+						</td>
+						<td>
+							<input type='password' id='userpw' name='userpw'>
+						</td>	
+					</tr>
+					<tr>
+						<td class="txt_right">
+							<label for='useremail'>이메일 : </label>
+						</td>
+						<td>
+							<input type='email' id='useremail' name='useremail'>
+						</td>	
+					</tr>
+					<tr >
+						<td class="txt_right">
+							<label for='userphone'>핸드폰 : </label>
+						</td>
+						<td>
+							<select id="userphone">
+							    <option value="">::선택::</option>
+							    <option value="010">010</option>
+							    <option value="011">011</option>
+							    <option value="016">016</option>
+							    <option value="017">017</option>
+							    <option value="019">019</option>	    
+							</select>-
+							<input type='tel' id='userphone' name='userphone' size="4" maxlength="4">-
+							<input type='tel' id='userphone' name='userphone' size="4" maxlength="4">
+						</td>	
+					</tr>
+					</tbody>
+					<tfoot>
+					<tr height="50">
+						<td colspan="2" class="txt_center" >
+							<button type="button"  onclick="location.href='index.html'">취소</button> <button type="submit">회원가입</button>
+						</td>	
+					</tr>
+					</tfoot>
+				</table>
+			</div>
+		</form>
 	</body>
 </html>
