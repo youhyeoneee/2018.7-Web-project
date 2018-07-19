@@ -5,6 +5,7 @@
 		<title>회원가입</title>
 		<style type="text/css">
 		 .layer{
+
 		 	position: absolute;
 		 	padding: 50px;
 		 	top: 50%;
@@ -19,58 +20,82 @@
 		 	margin: auto;
 		 	
 		 }
+		 tr{
+		 	height="50";
+		 }
+		 .txt_center
+		 {
+		 	text-align: center;
+		 }
+		 .txt_right
+		 {
+		 	text-align: right;
+		 }
+
 		</style>
 	</head>
 	<body>
 		<div class="layer">
-			<table>
+			<table border="0">
+				<thead></thead>
+				<tbody>
 				<tr>
-					<td>
+					<td class="txt_right">
 						<label for='username'>ID : </label>
+					</td>
+					<td>
 						<input type='text' id='username' name='userid'><button type="button">중복 체크</button>
 					</td>
 				</tr>
 
-					<td>
+					<td class="txt_right">
 						<label for='userpw'>PW : </label>
+					</td>
+					<td>
 						<input type='password' id='userpw' name='userpw'>
 					</td>				
 				<tr>
-					<td>
+					<td class="txt_right">
 						<label for='userpw'>PW체크: </label>
+					</td>
+					<td>
 						<input type='password' id='userpw' name='userpw'>
 					</td>	
 				</tr>
 				<tr>
-					<td>
+					<td class="txt_right">
 						<label for='useremail'>이메일 : </label>
+					</td>
+					<td>
 						<input type='email' id='useremail' name='useremail'>
 					</td>	
 				</tr>
-				<tr>
+				<tr >
 					<td>
 						<label for='userphone'>핸드폰 : </label>
+					</td>
+					<td>
 						<select id="userphone">
 						    <option value="">::선택::</option>
+						    <option value="010">010</option>
 						    <option value="011">011</option>
 						    <option value="016">016</option>
 						    <option value="017">017</option>
-						    <option value="019">019</option>
-						    <option value="010">010</option>
+						    <option value="019">019</option>	    
 						</select>-
-						<input type='tel' id='userphone' name='userphone' size="4">-
-						<input type='tel' id='userphone' name='userphone' size="4">
+						<input type='tel' id='userphone' name='userphone' size="4" maxlength="4">-
+						<input type='tel' id='userphone' name='userphone' size="4" maxlength="4">
 					</td>	
 				</tr>
-				<tr>
-					<td style="text-align: center;" >
-						<button type="button">취소</button> <button type="button">회원가입</button>
+				</tbody>
+				<tfoot>
+				<tr height="50">
+					<td colspan="2" class="txt_center" >
+						<button type="button"  onclick="location.href='index.html'">취소</button> <button type="button">회원가입</button>
 					</td>	
 				</tr>
+				</tfoot>
 			</table>
-
-			
-			
 		</div>
 	</body>
 </html>
