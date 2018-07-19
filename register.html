@@ -28,6 +28,47 @@
 		</style>
 		<link rel="stylesheet" type="text/css" href="./css.css">
 		<script>
+			function Check()
+			{
+				var Id =document.getElementById("userid").value;
+				var Pw =document.getElementById("userpw").value;
+				var PwCheck = document.getElementById("userpwcheck").value; 
+				var Email = document.getElementById("useremail").value;
+				var tel0 = document.getElementById("userphone0").value;
+				var tel1 = document.getElementById("userphone1").value;		
+				var tel2 = document.getElementById("userphone2").value;
+
+				if( Id == '')
+				{
+					alert("아이디를 입력해주세요!")
+
+				}
+
+				else if( Pw == '')
+				{
+					alert("비밀번호를 입력해주세요!")
+				}
+				else if( PwCheck == '')
+				{
+					alert("비밀번호확인을 입력해주세요!")
+				}
+				else if( Email == '')
+				{
+					alert("이메일을 입력해주세요!")
+				}
+				else if( tel0 == '' || tel1 == '' || tel2 == '')
+				{
+					alert("핸드폰번호를 입력해주세요!")
+				}
+					
+				else if( pw!=document.getElementById("userpwcheck").value)
+				{
+					alert("비밀번호와 비밀번호확인이 일치하지 않습니다!")
+					
+				}
+					
+			}
+
 			function IDcheck()
 			{
 				var id = "root";
@@ -40,16 +81,6 @@
 				else
 				{
 					alert("사용 가능한 아이디입니다!")
-				}
-			}
-			function PWcheck()
-			{
-				var pw = "autoset";
-
-				if(pw !=document.getElementById("userpw").value)
-				{
-					alert("비밀번호와 비밀번호확인이 일치하지 않습니다!")
-					
 				}
 			}
 			
@@ -66,7 +97,7 @@
 							<label for='userid'>ID : </label>
 						</td>
 						<td>
-							<input type='text' id='userid' name='userid'><button type="button" onclick="IDcheck()">중복 체크</button>
+							<input type='text' id='userid' name='userid' required=""><button type="button" onclick="IDcheck()">중복 체크</button>
 						</td>
 					</tr>
 
@@ -74,14 +105,14 @@
 							<label for='userpw'>PW : </label>
 						</td>
 						<td>
-							<input type='password' id='userpw' name='userpw'>
+							<input type='password' id='userpw' name='userpw' required="">
 						</td>				
 					<tr>
 						<td class="txt_right">
 							<label for='userpw'>PW체크: </label>
 						</td>
 						<td>
-							<input type='password' id='userpw' name='userpw'>
+							<input type='password' id='userpwcheck' name='userpwcheck' required="">
 						</td>	
 					</tr>
 					<tr>
@@ -89,7 +120,7 @@
 							<label for='useremail'>이메일 : </label>
 						</td>
 						<td>
-							<input type='email' id='useremail' name='useremail'>
+							<input type='email' id='useremail' name='useremail' required="">
 						</td>	
 					</tr>
 					<tr >
@@ -97,7 +128,7 @@
 							<label for='userphone'>핸드폰 : </label>
 						</td>
 						<td>
-							<select id="userphone">
+							<select id="userphone0" required="">
 							    <option value="">::선택::</option>
 							    <option value="010">010</option>
 							    <option value="011">011</option>
@@ -105,15 +136,15 @@
 							    <option value="017">017</option>
 							    <option value="019">019</option>	    
 							</select>-
-							<input type='tel' id='userphone' name='userphone' size="4" maxlength="4">-
-							<input type='tel' id='userphone' name='userphone' size="4" maxlength="4">
+							<input type='tel' id='userphone1' name='userphone1' size="4" maxlength="4" required="">-
+							<input type='tel' id='userphone2' name='userphon2' size="4" maxlength="4" required="">
 						</td>	
 					</tr>
 					</tbody>
 					<tfoot>
 					<tr height="50">
 						<td colspan="2" class="txt_center" >
-							<button type="button"  onclick="location.href='index.html'">취소</button> <button type="submit" onclick="PWcheck()">회원가입</button>
+							<button type="button"  onclick="location.href='index.html'">취소</button> <button type="submit" onclick="Check()">회원가입</button>
 						</td>	
 					</tr>
 					</tfoot>
