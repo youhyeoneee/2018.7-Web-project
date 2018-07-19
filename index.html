@@ -4,7 +4,15 @@
 		<meta charset="utf-8">
 		<title>로그인</title>
 		<style type="text/css">
+		th{
+			text-align: right;
+		}
+		.txt_middle{
+			text-align: center;
+		}
 		 .layer{
+		 	min-width: 200px;
+		 	min-height: 100px;
 		 	position: absolute;
 		 	padding: 50px;
 		 	top: 50%;
@@ -12,29 +20,64 @@
 		 	background:#F5F5F5;
 		 	transform: translate(-50%, -50%);
 		 }
-		 /*table{
-		 	border: 1px solid black;
-		 	padding: 10px;
-		 }*/
+		 input{
+		 	height: 30px
+		 }
 		</style>
+		<script>
+			function doLogin()
+			{
+				var id = "root";
+				var pw = "autoset";
+				
+				if(id ==document.getElementById("userid").value)
+				{
+					if(pw == document.getElementById("userpw").value)
+					{
+						alert("로그인에 성공하였습니다!")
+					}
+					else
+					{
+						alert("비밀번호가 일치하지 않습니다!")
+						location.reload();
+					}
+				}
+				else
+				{
+					alert("아이디가 존재하지 않습니다!")
+					location.reload();
+				}
+
+			}
+			
+		</script>
 	</head>
 	<body>
 		<div class="layer">
-			<table>
-			<tr>
-				<th><label for='username'>ID : </label>
-				<input type='text' id='username' name='userid'>
-				</th>
-			<tr>
-				<th><label for='userpw'>PW : </label>
-				<input type='password' id='userpw' name='userpw'>
-				</th>
-			</tr>
-			<tr>
-				<th>
-				<button type="button">회원가입</button> <button type="button">로그인</button>
-				</th>
-			</tr>
+			<table border="0" height="100">
+				<thead></thead>
+					<tbody>
+				<tr>
+					<th style=''><label for='userid'>ID : </label>
+					</th>
+					<td>
+					<input type='text' id='userid' name='userid'>
+					</td>
+				<tr>
+					<th ><label for='userpw'>PW : </label>
+					</th>
+					<td>
+					<input type='password' id='userpw' name='userpw'>
+					</td>
+				</tr>
+				<tr>
+				</tbody>
+				<tfoot>
+					<th colspan="2" class='txt_middle'>
+					<button type="button" onclick="location.href='register.html'">회원가입</button> <button type="button" onclick="doLogin()">로그인</button>
+					</th>
+				</tr>
+				</tfoot>
 			</table>
 		</div>
 	</body>
