@@ -21,20 +21,31 @@
 				height: 50px;
 				line-height: 50px;
 			}
-			#content{
+			#sideinfo{
 				background-color: #F5F5F5;
 				float:left;
 				width:20%;
 				height:700px;
 
 			}
-			#sideinfo{
+			#content{
 				background-color: #DCDAD9;
 				float:right;
 				width:80%;
 				height:700px;
+				text-align: center;
 			}
-			
+			#in{
+				display: inline-block;
+			}
+		td{
+			height: 30px;
+		}
+		.padding{
+			padding-top: 300px;
+			padding-bottom: 300px;
+
+		}
 		</style>	
 		<link rel="stylesheet" type="text/css" href="./css.css">
 
@@ -45,8 +56,27 @@
 		<section>
 			 <div>
 			 		<div id ='header' class="txt_center">유딱유딱</div>
-			 		<div id ='header2' class="txt_center">블로그 게시판</div>		 		
-			 		<div id ='content'></div>
+			 		<div id ='header2' class="txt_center">블로그 게시판</div>
+			 		<div id ='content'>
+			 			<div id='in' class="padding">
+			 				<table border="1" style="margin: auto;">
+			 				<thead>
+			 					<tr>
+			 						<th>이름</th>
+			 						<th>나이</th>
+			 						<th>등등</th>
+			 					</tr>
+			 				</thead>
+			 				<tbody>
+			 					<tr>
+			 						<td></td>
+			 						<td></td>
+			 						<td></td>
+			 					</tr>
+			 				</tbody>
+			 			</table>
+			 			</div>
+			 		</div>
 			 		<div id ='sideinfo'></div>
 			 </div>
 		</section>
