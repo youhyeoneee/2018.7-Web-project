@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>회원가입</title>
+		<style type="text/css">
+		 .layer{
+		 	position: absolute;
+		 	padding: 50px;
+		 	top: 50%;
+		 	left: 50%;
+		 	background:#F5F5F5;
+		 	transform: translate(-50%, -50%);
+		 }
+		 
+		 table{
+		 	width: 100%;
+		 	height: 100px;
+		 	margin: auto;
+		 	
+		 }
+		</style>
+	</head>
+	<body>
+		<div class="layer">
+			<table>
+				<tr>
+					<td>
+						<label for='username'>ID : </label>
+						<input type='text' id='username' name='userid'><button type="button">중복 체크</button>
+					</td>
+				</tr>
+
+					<td>
+						<label for='userpw'>PW : </label>
+						<input type='password' id='userpw' name='userpw'>
+					</td>				
+				<tr>
+					<td>
+						<label for='userpw'>PW체크: </label>
+						<input type='password' id='userpw' name='userpw'>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						<label for='useremail'>이메일 : </label>
+						<input type='email' id='useremail' name='useremail'>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						<label for='userphone'>핸드폰 : </label>
+						<select id="userphone">
+						    <option value="">::선택::</option>
+						    <option value="011">011</option>
+						    <option value="016">016</option>
+						    <option value="017">017</option>
+						    <option value="019">019</option>
+						    <option value="010">010</option>
+						</select>-
+						<input type='tel' id='userphone' name='userphone' size="4">-
+						<input type='tel' id='userphone' name='userphone' size="4">
+					</td>	
+				</tr>
+				<tr>
+					<td style="text-align: center;" >
+						<button type="button">취소</button> <button type="button">회원가입</button>
+					</td>	
+				</tr>
+			</table>
+
+			
+			
+		</div>
+	</body>
+</html>
