@@ -4,19 +4,23 @@
 		<meta charset="utf-8">
 		<title>로그인</title>
 		<style type="text/css">
-			#wrapper{
-				width: 1000px 
-				margin: 0 auto;	
-			}
+		 .layer{
+		 	position: absolute;
+		 	padding: 50px;
+		 	top: 50%;
+		 	left: 50%;
+		 	background:#F5F5F5;
+		 	transform: translate(-50%, -50%);
+		 }
 		</style>
 	</head>
 	<body>
-		<div id="wrapper" >
+		<div class="layer">
 			<label for='username'>ID : </label>
-			<input type='text' id='username' name='userid'><br>
+			<input type='text' id='username' name='userid'><br><br>
 			<label for='userpw'>PW : </label>
-			<input type='password' id='userpw' name='userpw'>
-			<button type='submit'>로그인</button>
+			<input type='password' id='userpw' name='userpw'><br><br>
+			<button type="button">회원가입</button> <button type="button">로그인</button>
 		</div>
 	</body>
 </html>
