@@ -12,15 +12,30 @@
 		 	background:#F5F5F5;
 		 	transform: translate(-50%, -50%);
 		 }
+		 /*table{
+		 	border: 1px solid black;
+		 	padding: 10px;
+		 }*/
 		</style>
 	</head>
 	<body>
 		<div class="layer">
-			<label for='username'>ID : </label>
-			<input type='text' id='username' name='userid'><br><br>
-			<label for='userpw'>PW : </label>
-			<input type='password' id='userpw' name='userpw'><br><br>
-			<button type="button">회원가입</button> <button type="button">로그인</button>
+			<table>
+			<tr>
+				<th><label for='username'>ID : </label>
+				<input type='text' id='username' name='userid'>
+				</th>
+			<tr>
+				<th><label for='userpw'>PW : </label>
+				<input type='password' id='userpw' name='userpw'>
+				</th>
+			</tr>
+			<tr>
+				<th>
+				<button type="button">회원가입</button> <button type="button">로그인</button>
+				</th>
+			</tr>
+			</table>
 		</div>
 	</body>
 </html>
